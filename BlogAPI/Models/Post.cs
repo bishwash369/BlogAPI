@@ -13,6 +13,7 @@ namespace BlogAPI.Models
         [Required]
         public string Title { get; set; }
         public string Content { get; set; }
+        public DateTime DateTime { get; set; }
         public int AuthorId { get; set; }
 
         [ForeignKey("AuthorId")]

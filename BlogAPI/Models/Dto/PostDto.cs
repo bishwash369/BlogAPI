@@ -11,5 +11,6 @@ namespace BlogAPI.Models.Dto
         public string Title { get; set; }
         public string Content { get; set; }
         public int AuthorId { get; set; }
+        public DateTime DateTime { get; set; }
     }
 }
