@@ -2,6 +2,7 @@ using BlogAPI.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +30,20 @@ namespace BlogAPI
         {
             services.AddDbContext<BlogDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<BlogDbContext>();
+            services.AddTransient<BlogDbContext>();
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("BlogApiSpec",
+                    new Microsoft.OpenApi.Models.OpenApiInfo()
+                    {
+                        Title = "Blog API",
+                        Version = "1",
+                        Description = "API for a Blog website"
+                    });
+            });
+            
             services.AddControllers();
         }
 
@@ -41,9 +56,15 @@ namespace BlogAPI
             }
 
             app.UseHttpsRedirection();
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/BlogApiSpec/swagger.json", "Blog API");
+                options.RoutePrefix = "";
+            }); 
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

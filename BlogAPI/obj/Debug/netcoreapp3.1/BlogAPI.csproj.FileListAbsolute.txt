@@ -52,7 +52,6 @@ C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\runtimes\
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\obj\Debug\netcoreapp3.1\BlogAPI.csprojAssemblyReference.cache
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\obj\Debug\netcoreapp3.1\BlogAPI.AssemblyInfoInputs.cache
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\obj\Debug\netcoreapp3.1\BlogAPI.AssemblyInfo.cs
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\obj\Debug\netcoreapp3.1\BlogAPI.csproj.CoreCompileInputs.cache
@@ -73,3 +72,8 @@ C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

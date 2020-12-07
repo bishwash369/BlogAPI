@@ -26,6 +26,7 @@ namespace BlogAPI.Controllers
         {
             return await db.Users.Select(x => new UserDto
             {
+                Id = x.Id,
                 Name = x.Name,
                 Address = x.Address,
                 Email = x.Email,
@@ -35,7 +36,7 @@ namespace BlogAPI.Controllers
         
         
         [HttpGet]
-        [Route("api/GetUser/{id}")]
+        [Route("api/GetUserById/{id}")]
         public async Task<User> GetUserById(int id)
         {
             return await db.Users.Where(x => x.Id == id).FirstOrDefaultAsync();
@@ -85,13 +86,20 @@ namespace BlogAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("api/DeleteUser/{id}")]
-        public async Task<IActionResult> DeleteUser(UserDto delete)
+        [Route("api/DeleteUser/{Id}")]
+        public async Task<IActionResult> DeleteUser(int Id)
         {
-            var deleteUser = await db.Users.Where(x => x.Id == delete.Id).FirstOrDefaultAsync();
-            db.Users.Remove(deleteUser);
-            await db.SaveChangesAsync();
-            return Ok("User successfully deleted");
+            try
+            {
+                var del = await db.Users.Where(x => x.Id == Id).FirstOrDefaultAsync();
+                db.Users.Remove(del);
+                await db.SaveChangesAsync();
+                return Ok("User Successfully Deleted");
+            }
+            catch(Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }

@@ -29,14 +29,14 @@ namespace BlogAPI.Controllers
                 Id = x.Id,
                 Title = x.Title,
                 Content = x.Content,
-                DateTime = x.DateTime,
+                //DateTime = x.DateTime,
                 AuthorId = x.AuthorId,
             }).ToListAsync();
          }
 
         [HttpGet]
-        [Route("api/GetPostById")]
-        public async Task<Post> GetPostById (int id)
+        [Route("api/GetPostById/{id}")]
+        public async Task<Post> GetPostById(int id)
         {
             return await db.Posts.Where(x => x.Id == id).FirstOrDefaultAsync();
         }
@@ -51,7 +51,7 @@ namespace BlogAPI.Controllers
                 Title = post.Title,
                 Content = post.Content,
                 AuthorId = post.AuthorId,
-                DateTime = DateTime.Now
+               // DateTime = DateTime.Now
             };
             await db.Posts.AddAsync(createPost);
             await db.SaveChangesAsync();
@@ -68,7 +68,7 @@ namespace BlogAPI.Controllers
                 updatePost.Title = update.Title;
                 updatePost.Content = update.Content;
                 updatePost.AuthorId = update.AuthorId;
-                updatePost.DateTime = update.DateTime;
+                //updatePost.DateTime = update.DateTime;
                 db.Posts.Update(updatePost);
                 await db.SaveChangesAsync();
                 return Ok("Post succesfully updated");
@@ -81,7 +81,7 @@ namespace BlogAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("api/DeletePost/{id")]
+        [Route("api/DeletePost/{id}")]
         public async Task<IActionResult> DeletePost(int delete)
         {
             try
@@ -94,7 +94,7 @@ namespace BlogAPI.Controllers
             }
             catch(Exception ex)
             {
-                return BadRequest(ex.Message);
+                return NotFound(ex.Message);
             }
         }
 
