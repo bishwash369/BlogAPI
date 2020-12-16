@@ -77,3 +77,8 @@ C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\IdentityModel.AspNetCore.OAuth2Introspection.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\IdentityServer4.AccessTokenValidation.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\pavilion\source\repos\BlogAPI\BlogAPI\obj\Debug\netcoreapp3.1\BlogAPI.csprojAssemblyReference.cache

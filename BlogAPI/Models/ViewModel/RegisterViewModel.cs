@@ -14,6 +14,9 @@ namespace BlogAPI.Models.ViewModel
 
         [Required]
         [DataType(DataType.Password)]
+        public string password { get; set; }
+
+        [DataType(DataType.Password)]
         [Display(Name = "Confirm Password")]
         [Compare ("Password",
             ErrorMessage = "Password and Confirmation of password")]

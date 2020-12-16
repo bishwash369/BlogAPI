@@ -30,8 +30,11 @@ namespace BlogAPI
         {
             services.AddDbContext<BlogDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
+            //Identity Server
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<BlogDbContext>();
+            
             services.AddTransient<BlogDbContext>();
             services.AddSwaggerGen(options =>
             {
@@ -64,7 +67,7 @@ namespace BlogAPI
             }); 
 
             app.UseRouting();
-            app.UseAuthentication();
+            app.UseAuthentication(); 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
